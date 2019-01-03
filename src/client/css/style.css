@@ -42,6 +42,7 @@ body {
 }
 
 .imageViewer {
+  
 }
 
 .myNav {
@@ -128,7 +129,7 @@ body, html {height:100%}
 
 .studyRow {
     margin-left: 0px;
-    margin-rigth: 0px;
+    /* margin-right: 0px; */
     height:100%;
 }
 
@@ -188,4 +189,32 @@ a.list-group-item.active:focus {
 
 .dropdown-menu {
   min-width: 40px;
+}
+
+
+/* Freelancer Modification @Md Abdus S */
+.med_ass_pre_test{
+    color: #ffffffad;
+    border: 2px dotted #ffffffad;
+    border-style: dotted solid;
+    border-radius: 25px 0px 67px 0px;
+    padding: 10px;
+    float: right;
+    margin-bottom: -8px;
+}
+
+.assistance_img{
+    float: right;
+    margin-right: -10px;
+}
+.cancer_parcentage,.cancerBirads{
+    color: red;
+    
+}
+/* Ovverride design  */
+.nav-tabs {
+    margin-top: -5px;
+}
+.nav>#assistance:hover{
+    opacity: 100% !important;
 }

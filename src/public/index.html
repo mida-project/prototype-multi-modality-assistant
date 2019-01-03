@@ -69,7 +69,19 @@
           </a>
         </div>
         <ul class="nav navbar-nav navbar-right">
-          <li><a id="assistant" href="#" class="button hidden-xs"><img src="https://github.com/mida-project/meta/blob/master/posters/breastscreening_assistant.png?raw=true" alt="Assistant" style="width: 100%; margin-right: -750px; margin-bottom: -40px; visibility: hidden" /></a></li>
+          <li><a id="assistant"  href="#" class="button hidden-xs">
+                  <!-- <img src="https://github.com/mida-project/meta/blob/master/posters/breastscreening_assistant.png?raw=true"
+                       alt="Assistant" style="width: 100%; margin-right: -750px; margin-bottom: -40px; visibility: hidden" /> -->
+                        <!-- <div class="assistance_img"><img src="assistant.gif" alt="assistant" width="50%"></div> -->
+                       <i class="fa fa-user-md assistance_img" style="font-size: 80px; color:rgba(240, 240, 240, 0.72)"></i>
+                       <p class="med_ass_pre_test ">Hello! I am your Assistant... <br>
+                         This Patient has <b> <span class="cancer_parcentage" id="cancer_parcentage">  </span> </b> chance of having Cancer !! <br>
+                          The estimeted BI-RADS is <b><span class="cancerBirads" id="cancerBirads"></span></b> 
+                       </p>
+              </a>
+          </li>
+          
+          
           <li><a id="help" href="#" class="button hidden-xs">Help</a></li>
           <li><a id="about" href="#" class="button hidden-xs">About</a></li>
         </ul>

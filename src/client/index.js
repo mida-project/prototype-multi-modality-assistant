@@ -7,7 +7,7 @@ var fileName = '../common/studyList';
 var fileFormat = '.json';
 var studyListFile = fileName + fileFormat;
 
-console.log('Read Study List File From: \n', studyListFile);
+//console.log('Read Study List File From: \n', studyListFile);
 
 var viewportTemplate; // the viewport template
 loadTemplate(viewportPath, function(element) {
@@ -21,11 +21,11 @@ loadTemplate(studyViewerPath, function(element) {
 
 // Get study list from JSON manifest
 $.getJSON(studyListFile, function(data) {
-  console.log("Getting study list...");
+  //console.log("Getting study list...");
   if (typeof data.studyList === "object") {
-    console.log("Consuming study list...");
+    //console.log("Consuming study list...");
     data.studyList.forEach(function(study) {
-      console.log("Creating study list tables...");
+      //console.log("Creating study list tables...");
       // Create one table row for each study in the manifest
       var studyRow = '<tr><td>' +
         study.patientId + '</td><td>' +
@@ -90,9 +90,11 @@ $.getJSON(studyListFile, function(data) {
       });
     });
   } else {
-    console.log("There is no list of studies. Please Upload some DICOM files.");
+    //console.log("There is no list of studies. Please Upload some DICOM files.");
   }
 });
+
+
 
 // Resize main
 
@@ -120,3 +122,14 @@ resizeMain();
 document.body.addEventListener('touchmove', function(e) {
   e.preventDefault();
 });
+
+// Abdus Samad___ Freelancer.com
+
+// Json file path 
+var jsonFileUrl = "../server/patients/patientdata.json";
+$.getJSON(jsonFileUrl, function(patientInfo) {
+  var cancerChance = patientInfo.patientData.patientList[1].cancerChance;
+  var birads = patientInfo.patientData.patientList[1].biradsAssis;
+  document.getElementById('cancer_parcentage').innerHTML = " " + cancerChance +"%";
+  document.getElementById('cancerBirads').innerHTML = " " + birads;
+})
