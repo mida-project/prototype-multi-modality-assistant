@@ -43,9 +43,43 @@ $.getJSON(studyListFile, function(data) {
         if ($('#tabs li').length >= 2) {
           alert('Please close the opened patient first !');
         } else {
+
           // Add new tab for this study and switch to it
           var studyTab = '<li><div id=complete-tab><a href="#x' + study.patientId + '" data-toggle="tab">' + study.patientId + '</a>' +
             '<input type="button" class="closeBtn" value="X" />' + '</li></div>';
+
+          // Abdus Samad___ Freelancer.com
+
+          // Json file path
+          var jsonFileUrl = "../common/dataset/" + study.patientId +".json";
+          $.getJSON(jsonFileUrl)
+            .done(function(individualPatientData) {
+                // informations
+                let biradsAssis = individualPatientData.patient[0].biradsAssis;
+                let biradsPhys = individualPatientData.patient[0].biradsPhys;
+                let cancerChance = individualPatientData.patient[0].cancerChance;
+                console.log("In")
+                $('.assistant_information').css({display:"block"});
+                let assistantText = "Hello! I am your Assistant...<br />" + "This Patient has <span class'cancer_parcentage'>"+ cancerChance +"% </span> chance of having Cancer !! <br /> The estimeted BI-RADS is:" + biradsPhys;
+                // display text if any data for the patient
+                document.getElementById("assistant_information").innerHTML = assistantText;
+
+
+              })
+              .fail(function(jqXHR, textStatus) {
+                if (textStatus == 'parsererror') {
+                  $('.assistant_information').css({display:"block"});
+                  let failAssistantText = "Sorry i have no infomation about the patient!"
+                  document.getElementById("assistant_information").innerHTML = failAssistantText;
+                }
+            })
+
+
+          // End - Abdus Samad___ Freelancer.com
+
+
+
+
           $('#tabs').append(studyTab);
           // Add tab content by making a copy of the studyViewerTemplate element
           var studyViewerCopy = studyViewerTemplate.clone();
@@ -82,6 +116,8 @@ $.getJSON(studyListFile, function(data) {
             if($(tabDataElement).length > 0){
               $(tabDataElement)[0].remove();
             }
+            // Close Assistant -- by Samad
+            $('.assistant_information').css({display:'none'});
           });
 
           // Now load the study.json
@@ -123,13 +159,11 @@ document.body.addEventListener('touchmove', function(e) {
   e.preventDefault();
 });
 
-// Abdus Samad___ Freelancer.com
-
-// Json file path 
-var jsonFileUrl = "../server/patients/patientdata.json";
-$.getJSON(jsonFileUrl, function(patientInfo) {
-  var cancerChance = patientInfo.patientData.patientList[1].cancerChance;
-  var birads = patientInfo.patientData.patientList[1].biradsAssis;
-  document.getElementById('cancer_parcentage').innerHTML = " " + cancerChance +"%";
-  document.getElementById('cancerBirads').innerHTML = " " + birads;
-})
+// // Json file path
+// var jsonFileUrl = "../server/patients/patientdata.json";
+// $.getJSON(jsonFileUrl, function(patientInfo) {
+//   var cancerChance = patientInfo.patientData.patientList[1].cancerChance;
+//   var birads = patientInfo.patientData.patientList[1].biradsAssis;
+//   document.getElementById('cancer_parcentage').innerHTML = " " + cancerChance +"%";
+//   document.getElementById('cancerBirads').innerHTML = " " + birads;
+// })
