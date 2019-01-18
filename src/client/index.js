@@ -50,20 +50,27 @@ $.getJSON(studyListFile, function(data) {
 
           // Abdus Samad___ Freelancer.com
 
-          // Json file path
+          // Json file path 
           var jsonFileUrl = "../common/dataset/" + study.patientId +".json";
+          var messageUrl = "../common/messages/assistant_msg.json";
           $.getJSON(jsonFileUrl)
             .done(function(individualPatientData) {
-                // informations
+                // informations reading from json file
                 let biradsAssis = individualPatientData.patient[0].biradsAssis;
                 let biradsPhys = individualPatientData.patient[0].biradsPhys;
                 let cancerChance = individualPatientData.patient[0].cancerChance;
-                console.log("In")
-                $('.assistant_information').css({display:"block"});
-                let assistantText = "Hello! I am your Assistant...<br />" + "This Patient has <span class'cancer_parcentage'>"+ cancerChance +"% </span> chance of having Cancer !! <br /> The estimeted BI-RADS is:" + biradsPhys;
-                // display text if any data for the patient
-                document.getElementById("assistant_information").innerHTML = assistantText;
-
+                $.getJSON(messageUrl)
+                  .done(function(messageText) {
+                      let msg1 = messageText.assisMessage[0].message_001;
+                      let msg2 = messageText.assisMessage[0].message_002;
+                      let msg3 = messageText.assisMessage[0].message_003;
+                      let msg4 = messageText.assisMessage[0].message_004;
+                      let msg5 = messageText.assisMessage[0].message_005;
+                    $('.assistant_information').css({display:"block"});
+                    let assistantText = msg1 +" "+ msg2 + " <br />" + msg3 + " <span class'cancer_parcentage'>"+ cancerChance +"% </span> " + msg4 + "!! <br />" + msg5 +":" + biradsPhys; 
+                    // display text if any data for the patient 
+                    document.getElementById("assistant_information").innerHTML = assistantText;
+                  })
 
               })
               .fail(function(jqXHR, textStatus) {
@@ -73,7 +80,7 @@ $.getJSON(studyListFile, function(data) {
                   document.getElementById("assistant_information").innerHTML = failAssistantText;
                 }
             })
-
+   
 
           // End - Abdus Samad___ Freelancer.com
 
@@ -87,7 +94,7 @@ $.getJSON(studyListFile, function(data) {
           var viewportCopy = viewportTemplate.clone();
           studyViewerCopy.find('.imageViewer').append(viewportCopy);
 
-
+ 
           studyViewerCopy.attr("id", 'x' + study.patientId);
           // Make the viewer visible
           studyViewerCopy.removeClass('hidden');
@@ -159,7 +166,9 @@ document.body.addEventListener('touchmove', function(e) {
   e.preventDefault();
 });
 
-// // Json file path
+// Abdus Samad___ Freelancer.com
+
+// // Json file path 
 // var jsonFileUrl = "../server/patients/patientdata.json";
 // $.getJSON(jsonFileUrl, function(patientInfo) {
 //   var cancerChance = patientInfo.patientData.patientList[1].cancerChance;

@@ -71,7 +71,7 @@ var mainServerValue = configObject.mainServer;
 var hotjarValue = mainServerValue[0].hotjar;
 var hotjarNumber = Number(hotjarValue);
 
-console.log("Hotjar Number:\n", hotjarNumber);
+//console.log("Hotjar Number:\n", hotjarNumber);
 
 /* ================================================== */
 /* ================================================== */
@@ -92,7 +92,7 @@ console.log("Hotjar Number:\n", hotjarNumber);
   r=o.createElement('script');r.async=1;
   r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
   a.appendChild(r);
-  console.log("Append Child:\n", a.appendChild(r));
+  //console.log("Append Child:\n", a.appendChild(r));
 })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 
-console.log("Hotjar is running...");
+//console.log("Hotjar is running...");

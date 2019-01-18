@@ -81,8 +81,8 @@ var refEndValue = portEscapeValue + portValue + suffixValue;
 
 var dicomServerPath = refStartValue + hostnameValue + refEndValue;
 
-// console.log('Local DICOM Server Path:\n', localDicomServerPath);
-// console.log('Current DICOM Server Path:\n', dicomServerPath);
+// //console.log('Local DICOM Server Path:\n', localDicomServerPath);
+// //console.log('Current DICOM Server Path:\n', dicomServerPath);
 
 /* ================================================== */
 /* ================================================== */
@@ -108,7 +108,7 @@ var instanceObjectData = [];
 /* ================================================== */
 
 
-// console.log("Config File Path: ", configFilePath);
+// //console.log("Config File Path: ", configFilePath);
 
 
 /* ================================================== */
@@ -291,14 +291,14 @@ var UpdatePatientData = function(patients) {
         const slNumImages = slSeries.length;
         const slStudyId = slEach.ID;
 
-        console.log("Get Study List From: ", JSON.stringify(slEach));
-        console.log("Patient Name: ", JSON.stringify(slPatientName));
-        console.log("Patient ID: ", JSON.stringify(slPatientId));
-        console.log("Study Date: ", JSON.stringify(slStudyDate));
-        console.log("Modality: ", JSON.stringify(slModality));
-        console.log("Study Description: ", JSON.stringify(slStudyDescription));
-        console.log("Number of Images: ", JSON.stringify(slNumImages));
-        console.log("Study ID: ", JSON.stringify(slStudyId));
+        //console.log("Get Study List From: ", JSON.stringify(slEach));
+        //console.log("Patient Name: ", JSON.stringify(slPatientName));
+        //console.log("Patient ID: ", JSON.stringify(slPatientId));
+        //console.log("Study Date: ", JSON.stringify(slStudyDate));
+        //console.log("Modality: ", JSON.stringify(slModality));
+        //console.log("Study Description: ", JSON.stringify(slStudyDescription));
+        //console.log("Number of Images: ", JSON.stringify(slNumImages));
+        //console.log("Study ID: ", JSON.stringify(slStudyId));
 
         //var fileName = slPatientName;
         var fileName = slPatientId;
@@ -340,17 +340,17 @@ var UpdatePatientData = function(patients) {
     studyList = {
       "studyList": studyListData
     };
-    console.log(JSON.stringify(studies));
+    //console.log(JSON.stringify(studies));
 
     $.ajax({
       url: '/UpdatePatients',
       data: JSON.stringify(studyList),
       type: 'POST',
       success: function(data) {
-        console.log('File studyList.json successfully updated on server');
+        //console.log('File studyList.json successfully updated on server');
       },
       error: function(xhr, status, error) {
-        console.log('Error Occured while saving file');
+        //console.log('Error Occured while saving file');
       }
     });
 
@@ -363,10 +363,10 @@ var UpdatePatientData = function(patients) {
       data: JSON.stringify(files),
       type: 'POST',
       success: function(data) {
-        console.log('patients File saved successfully on server');
+        //console.log('patients File saved successfully on server');
       },
       error: function(xhr, status, error) {
-        console.log('Error Occured while saving file');
+        //console.log('Error Occured while saving file');
       }
     });
   } else {
@@ -431,10 +431,10 @@ var UpdatePatientDataDefault = function() {
     data: JSON.stringify(studyListDefault),
     type: 'POST',
     success: function(data) {
-      console.log('File studyList.json successfully updated on server');
+      //console.log('File studyList.json successfully updated on server');
     },
     error: function(xhr, status, error) {
-      console.log('Error Occured while saving file');
+      //console.log('Error Occured while saving file');
     }
   });
 }

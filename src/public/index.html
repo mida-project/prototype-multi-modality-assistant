@@ -30,6 +30,7 @@
 
   <!-- CSS -->
 
+
   <!-- Font awesome CSS for tool icons -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
@@ -42,86 +43,93 @@
   <!-- Hotjar Tracking Code -->
   <script src="../server/utils/hotjar.js" type="module"></script>
 
+
 </head>
 
 <body>
 
-  <div id="wrap">
+  </div>
+    <div id="wrap">
+      <div id="overlay" class="cover blur-in">
+        
 
-    <!-- Nav bar -->
-    <nav class="myNav navbar navbar-default" role="navigation">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="index.html">
-            BreastScreening
-          </a>
-          <a class="navbar-brand" target="_blank" href="https://mimbcd-ui.github.io/">
-            <i class="fa fa-link fa-lg" aria-hidden="true"></i>
-          </a>
-          <a class="navbar-brand" target="_blank" href="https://github.com/MIMBCD-UI">
-            <i class="fa fa-github fa-lg" aria-hidden="true"></i>
-          </a>
-          <a class="navbar-brand" target="_blank" href="https://www.researchgate.net/project/MIMBCD-UI">
-            <i class="fa fa-flask fa-lg" aria-hidden="true"></i>
-          </a>
-          <a class="navbar-brand" target="_blank" href="https://www.youtube.com/channel/UCPz4aTIVHekHXTxHTUOLmXw">
-            <i class="fa fa-youtube fa-lg" aria-hidden="true"></i>
-          </a>
+      <!-- Nav bar -->
+      <nav class="myNav navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+              BreastScreening
+            </a>
+            <a class="navbar-brand" target="_blank" href="https://mimbcd-ui.github.io/">
+              <i class="fa fa-link fa-lg" aria-hidden="true"></i>
+            </a>
+            <a class="navbar-brand" target="_blank" href="https://github.com/MIMBCD-UI">
+              <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+            </a>
+            <a class="navbar-brand" target="_blank" href="https://www.researchgate.net/project/MIMBCD-UI">
+              <i class="fa fa-flask fa-lg" aria-hidden="true"></i>
+            </a>
+            <a class="navbar-brand" target="_blank" href="https://www.youtube.com/channel/UCPz4aTIVHekHXTxHTUOLmXw">
+              <i class="fa fa-youtube fa-lg" aria-hidden="true"></i>
+            </a>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a id="assistant"  href="#" class="button hidden-xs" style="min-height:100px"> 
+                    <div class="assistant_information" style="display:none">  <!--- ->Creating new div by Samad -->
+                        <i class="fa fa-user-md assistance_img" style="font-size: 70px; color:rgba(240, 240, 240, 0.72)"></i>
+                        <p class="med_ass_pre_test" id="assistant_information"></p>
+                    </div>
+                </a>
+            </li>
+
+            <li><a id="help" href="#" class="button hidden-xs">Help</a></li>
+            <li><a id="about" href="#" class="button hidden-xs">About</a></li>
+          </ul>
         </div>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a id="assistant"  href="#" class="button hidden-xs" style="min-height:100px"> 
-                  <div class="assistant_information" style="display:none">  <!--- ->Creating new div by Samad -->
-                      <i class="fa fa-user-md assistance_img" style="font-size: 70px; color:rgba(240, 240, 240, 0.72)"></i>
-                      <p class="med_ass_pre_test" id="assistant_information">
-                      </p>
-                  </div>
-              </a>
-          </li>
-          
-          
-          <li><a id="help" href="#" class="button hidden-xs">Help</a></li>
-          <li><a id="about" href="#" class="button hidden-xs">About</a></li>
+      </nav>
+
+      <div class='main'>
+
+        <!-- Tabs bar -->
+        <ul id="tabs" class="nav nav-tabs" >
+          <li class="active"><a href="#studyList" data-toggle="tab">Study List</a></li>
         </ul>
-      </div>
-    </nav>
 
-    <div class='main'>
+        <!-- Tab content -->
+        <div id="tabContent" class="tab-content">
+          <!-- Study list -->
+          <div id="studyList" class="tab-pane active">
+            <div class="row">
+              <table  class="col-md-12 table table-striped">
+                <thead>
+                  <tr>
+                    <th>Patient ID</th>
+                    <th>Study Date</th>
+                    <th>Modality</th>
+                    <th>Study Description</th>
+                    <th># Images</th>
+                  </tr>
+                </thead>
 
-      <!-- Tabs bar -->
-      <ul id="tabs" class="nav nav-tabs" >
-        <li class="active"><a href="#studyList" data-toggle="tab">Study List</a></li>
-      </ul>
-
-      <!-- Tab content -->
-      <div id="tabContent" class="tab-content">
-        <!-- Study list -->
-        <div id="studyList" class="tab-pane active">
-          <div class="row">
-            <table  class="col-md-12 table table-striped">
-              <thead>
-                <tr>
-                  <th>Patient ID</th>
-                  <th>Study Date</th>
-                  <th>Modality</th>
-                  <th>Study Description</th>
-                  <th># Images</th>
-                </tr>
-              </thead>
-
-              <tbody id="studyListData">
-                <!-- Table rows get populated from the JSON studyList manifest -->
-              </tbody>
-            </table>
+                <tbody id="studyListData">
+                  <!-- Table rows get populated from the JSON studyList manifest -->
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
+        <!-- Study viewer tab content template -->
+    </div>
 
-      <!-- Study viewer tab content template -->
+    <!-- pop up text area -->
+    
+
   </div>
-</div>
 
 
 <!-- Javascripts -->
+
 
 <!-- Include JQuery -->
 <script src="../client/lib/jquery.min.js"></script>
@@ -156,6 +164,7 @@
 <!-- include the dicomParser library -->
 <script src="../client/lib/dicomParser.js"></script>
 
+
 <!-- =============================== -->
 <!-- include Source JavaScript files -->
 <!-- =============================== -->
@@ -172,6 +181,7 @@
 <script src="../client/loaders/loadTemplate.js"></script>
 <script src="../client/modals/help.js"></script>
 <script src="../client/modals/about.js"></script>
+<script src="../client/modals/assistantpopup.js"></script>
 <script src="../client/viewport/setupViewportOverlays.js"></script>
 <script src="../client/loaders/loadList.js" type="module"></script>
 <script src="../client/index.js" type="module"></script>

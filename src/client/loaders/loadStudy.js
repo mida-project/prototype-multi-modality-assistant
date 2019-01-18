@@ -56,7 +56,7 @@ var configFilePath = configFileDir + fileFull;
 /* ================================================== */
 
 
-console.log("Config File Path: ", configFilePath);
+//console.log("Config File Path: ", configFilePath);
 
 
 /* ================================================== */
@@ -87,8 +87,8 @@ var refEndValue = portEscapeValue + portValue + suffixValue;
 
 var dicomServerPath = refStartValue + hostnameValue + refEndValue;
 
-console.log('Local DICOM Server Path:\n', localDicomServerPath);
-console.log('Current DICOM Server Path:\n', dicomServerPath);
+//console.log('Local DICOM Server Path:\n', localDicomServerPath);
+//console.log('Current DICOM Server Path:\n', dicomServerPath);
 
 /* ================================================== */
 /* ================================================== */
@@ -108,7 +108,7 @@ var instancesDirPath = 'instances' + '/';
 
 var instancesPath = dicomServerPath + instancesDirPath;
 
-console.log();
+//console.log();
 
 /* ================================================== */
 /* ================================================== */
@@ -194,7 +194,7 @@ function loadStudy(studyViewer, viewportModel, studyId) {
                         //imageId = "dicomweb://localhost:8042/instances/" + imageId;
                         imageId = instancesPath + imageId;
                         //imageId = "wadouri://localhost:8042/wado?objectUID=" + imageId + "&requestType=WADO&contentType=application/dicom";
-                        console.log("DICOM ID: ", imageId);
+                        //console.log("DICOM ID: ", imageId);
                         studyViewer.roiData.dicom_id = imageId;
                     }
                     stack.imageIds.push(imageId);
@@ -209,7 +209,7 @@ function loadStudy(studyViewer, viewportModel, studyId) {
                         //imageId = "dicomweb://localhost:8042/instances/" + image.imageId;
                         imageId = instancesPath + image.imageId;
                         //imageId = "wadouri://localhost:8042/wado?objectUID=" + image.imageId + "&requestType=WADO&contentType=application/dicom";
-                        console.log("DICOM Image ID: ", image.imageId);
+                        //console.log("DICOM Image ID: ", image.imageId);
                     }
                     stack.imageIds.push(imageId);
                 });
@@ -317,7 +317,7 @@ function loadStudy(studyViewer, viewportModel, studyId) {
         function resizeStudyViewer() {
             var studyRow = $(studyViewer).find('.studyContainer')[0];
             var height = $(studyRow).height();
-            var width = $(studyRow).width();console.log($(studyRow).innerWidth(),$(studyRow).outerWidth(),$(studyRow).width());
+            var width = $(studyRow).width();//console.log($(studyRow).innerWidth(),$(studyRow).outerWidth(),$(studyRow).width());
             $(seriesList).height("100%");
             $(parentDiv).width(width - $(studyViewer).find('.thumbnailSelector:eq(0)').width());
             $(parentDiv).css({height : '100%'});
