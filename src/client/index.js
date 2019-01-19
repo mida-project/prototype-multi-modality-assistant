@@ -48,7 +48,7 @@ $.getJSON(studyListFile, function(data) {
           var studyTab = '<li><div id=complete-tab><a href="#x' + study.patientId + '" data-toggle="tab">' + study.patientId + '</a>' +
             '<input type="button" class="closeBtn" value="X" />' + '</li></div>';
 
-          // Abdus Samad___ Freelancer.com
+          // Abdus Samad___ http://freelancer.com/u/samad55
 
           // Json file path 
           var jsonFileUrl = "../common/dataset/" + study.patientId +".json";
@@ -58,7 +58,7 @@ $.getJSON(studyListFile, function(data) {
                 // informations reading from json file
                 let biradsAssis = individualPatientData.patient[0].biradsAssis;
                 let biradsPhys = individualPatientData.patient[0].biradsPhys;
-                let cancerChance = individualPatientData.patient[0].cancerChance;
+                let cancerChance = individualPatientData.patient[0].cancerChance; 
                 $.getJSON(messageUrl)
                   .done(function(messageText) {
                       let msg1 = messageText.assisMessage[0].message_001;
@@ -75,14 +75,20 @@ $.getJSON(studyListFile, function(data) {
               })
               .fail(function(jqXHR, textStatus) {
                 if (textStatus == 'parsererror') {
-                  $('.assistant_information').css({display:"block"});
-                  let failAssistantText = "Sorry i have no infomation about the patient!"
-                  document.getElementById("assistant_information").innerHTML = failAssistantText;
+                  $.getJSON(messageUrl)
+                  .done(function(messageText) {
+                    let warn1 = messageText.assisWarning[0].warning_001;
+                    let warn2 = messageText.assisWarning[0].warning_002;
+                    let warn3 = messageText.assisWarning[0].warning_003;
+                    $('.assistant_information').css({display:"block"});
+                    let failAssistantText = "Sorry i have no infomation about the patient! <br />" + warn1 +" <span />" + warn2 +"<br />"+ warn3;
+                    document.getElementById("assistant_information").innerHTML = failAssistantText;
+                  })
                 }
             })
    
 
-          // End - Abdus Samad___ Freelancer.com
+          // End - Abdus Samad___ http://freelancer.com/u/samad55
 
 
 
@@ -133,7 +139,6 @@ $.getJSON(studyListFile, function(data) {
       });
     });
   } else {
-    //console.log("There is no list of studies. Please Upload some DICOM files.");
   }
 });
 
@@ -165,14 +170,3 @@ resizeMain();
 document.body.addEventListener('touchmove', function(e) {
   e.preventDefault();
 });
-
-// Abdus Samad___ Freelancer.com
-
-// // Json file path 
-// var jsonFileUrl = "../server/patients/patientdata.json";
-// $.getJSON(jsonFileUrl, function(patientInfo) {
-//   var cancerChance = patientInfo.patientData.patientList[1].cancerChance;
-//   var birads = patientInfo.patientData.patientList[1].biradsAssis;
-//   document.getElementById('cancer_parcentage').innerHTML = " " + cancerChance +"%";
-//   document.getElementById('cancerBirads').innerHTML = " " + birads;
-// })

@@ -1,0 +1,9 @@
+{
+    "patient" : [
+        {
+            "biradsAssis" : 1.1 ,
+            "biradsPhys" : 1.2,
+            "cancerChance" : 1.3
+        }
+    ]
+}
