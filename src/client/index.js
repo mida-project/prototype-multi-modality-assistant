@@ -48,9 +48,7 @@ $.getJSON(studyListFile, function(data) {
           var studyTab = '<li><div id=complete-tab><a href="#x' + study.patientId + '" data-toggle="tab">' + study.patientId + '</a>' +
             '<input type="button" class="closeBtn" value="X" />' + '</li></div>';
 
-          // Abdus Samad___ http://freelancer.com/u/samad55
-
-          // Json file path 
+          // Json file path
           var jsonFileUrl = "../common/dataset/" + study.patientId +".json";
           var messageUrl = "../common/messages/assistant_msg.json";
           $.getJSON(jsonFileUrl)
@@ -58,7 +56,7 @@ $.getJSON(studyListFile, function(data) {
                 // informations reading from json file
                 let biradsAssis = individualPatientData.patient[0].biradsAssis;
                 let biradsPhys = individualPatientData.patient[0].biradsPhys;
-                let cancerChance = individualPatientData.patient[0].cancerChance; 
+                let cancerChance = individualPatientData.patient[0].cancerChance;
                 $.getJSON(messageUrl)
                   .done(function(messageText) {
                       let msg1 = messageText.assisMessage[0].message_001;
@@ -67,8 +65,8 @@ $.getJSON(studyListFile, function(data) {
                       let msg4 = messageText.assisMessage[0].message_004;
                       let msg5 = messageText.assisMessage[0].message_005;
                     $('.assistant_information').css({display:"block"});
-                    let assistantText = msg1 +" "+ msg2 + " <br />" + msg3 + " <span class'cancer_parcentage'>"+ cancerChance +"% </span> " + msg4 + "!! <br />" + msg5 +":" + biradsPhys; 
-                    // display text if any data for the patient 
+                    let assistantText = msg1 +" "+ msg2 + " <br />" + msg3 + " <span class'cancer_parcentage'>"+ cancerChance +"% </span> " + msg4 + "!! <br />" + msg5 +":" + biradsPhys;
+                    // display text if any data for the patient
                     document.getElementById("assistant_information").innerHTML = assistantText;
                   })
 
@@ -86,12 +84,6 @@ $.getJSON(studyListFile, function(data) {
                   })
                 }
             })
-   
-
-          // End - Abdus Samad___ http://freelancer.com/u/samad55
-
-
-
 
           $('#tabs').append(studyTab);
           // Add tab content by making a copy of the studyViewerTemplate element
@@ -100,7 +92,7 @@ $.getJSON(studyListFile, function(data) {
           var viewportCopy = viewportTemplate.clone();
           studyViewerCopy.find('.imageViewer').append(viewportCopy);
 
- 
+
           studyViewerCopy.attr("id", 'x' + study.patientId);
           // Make the viewer visible
           studyViewerCopy.removeClass('hidden');
@@ -129,7 +121,7 @@ $.getJSON(studyListFile, function(data) {
             if($(tabDataElement).length > 0){
               $(tabDataElement)[0].remove();
             }
-            // Close Assistant -- by Samad
+            // Close Assistant
             $('.assistant_information').css({display:'none'});
           });
 

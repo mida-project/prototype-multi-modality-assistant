@@ -42,7 +42,7 @@ body {
 }
 
 .imageViewer {
-  
+
 }
 
 .myNav {
@@ -192,7 +192,7 @@ a.list-group-item.active:focus {
 }
 
 
-/* Freelancer Modification @Md Abdus S http://freelancer.com/u/samad55 */
+/* Assistant Styles */
 .med_ass_pre_test{
     color: #ffffffad;
     border: 2px dotted #ffffffad;
@@ -209,7 +209,7 @@ a.list-group-item.active:focus {
 }
 .cancer_parcentage,.cancerBirads{
     color: red ;
-    
+
 }
 /* Ovverride design  */
 .nav-tabs {
