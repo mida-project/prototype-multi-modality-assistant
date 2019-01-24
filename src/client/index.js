@@ -7,7 +7,8 @@ var fileName = '../common/studyList';
 var fileFormat = '.json';
 var studyListFile = fileName + fileFormat;
 
-//console.log('Read Study List File From: \n', studyListFile);
+$("#assistant_information").hide();
+$(".assistance_img").hide();
 
 var viewportTemplate; // the viewport template
 loadTemplate(viewportPath, function(element) {
@@ -48,7 +49,7 @@ $.getJSON(studyListFile, function(data) {
           var studyTab = '<li><div id=complete-tab><a href="#x' + study.patientId + '" data-toggle="tab">' + study.patientId + '</a>' +
             '<input type="button" class="closeBtn" value="X" />' + '</li></div>';
 
-          // Json file path
+          // Json file path 
           var jsonFileUrl = "../common/dataset/" + study.patientId +".json";
           var messageUrl = "../common/messages/assistant_msg.json";
           $.getJSON(jsonFileUrl)
@@ -56,7 +57,7 @@ $.getJSON(studyListFile, function(data) {
                 // informations reading from json file
                 let biradsAssis = individualPatientData.patient[0].biradsAssis;
                 let biradsPhys = individualPatientData.patient[0].biradsPhys;
-                let cancerChance = individualPatientData.patient[0].cancerChance;
+                let cancerChance = individualPatientData.patient[0].cancerChance; 
                 $.getJSON(messageUrl)
                   .done(function(messageText) {
                       let msg1 = messageText.assisMessage[0].message_001;
@@ -65,9 +66,10 @@ $.getJSON(studyListFile, function(data) {
                       let msg4 = messageText.assisMessage[0].message_004;
                       let msg5 = messageText.assisMessage[0].message_005;
                     $('.assistant_information').css({display:"block"});
-                    let assistantText = msg1 +" "+ msg2 + " <br />" + msg3 + " <span class'cancer_parcentage'>"+ cancerChance +"% </span> " + msg4 + "!! <br />" + msg5 +":" + biradsPhys;
-                    // display text if any data for the patient
+                    let assistantText = msg1 +" "+ msg2 + " <br />" + msg3 + " <span class'cancer_parcentage'>"+ cancerChance +"% </span> " + msg4 + "!! <br />" + msg5 +":" + biradsPhys; 
+                    // display text if any data for the patient 
                     document.getElementById("assistant_information").innerHTML = assistantText;
+                    avator_animation();
                   })
 
               })
@@ -81,6 +83,7 @@ $.getJSON(studyListFile, function(data) {
                     $('.assistant_information').css({display:"block"});
                     let failAssistantText = "Sorry i have no infomation about the patient! <br />" + warn1 +" <span />" + warn2 +"<br />"+ warn3;
                     document.getElementById("assistant_information").innerHTML = failAssistantText;
+                    avator_animation();
                   })
                 }
             })
@@ -92,7 +95,7 @@ $.getJSON(studyListFile, function(data) {
           var viewportCopy = viewportTemplate.clone();
           studyViewerCopy.find('.imageViewer').append(viewportCopy);
 
-
+ 
           studyViewerCopy.attr("id", 'x' + study.patientId);
           // Make the viewer visible
           studyViewerCopy.removeClass('hidden');
@@ -122,7 +125,10 @@ $.getJSON(studyListFile, function(data) {
               $(tabDataElement)[0].remove();
             }
             // Close Assistant
-            $('.assistant_information').css({display:'none'});
+            // $('.assistant_information').css({display:'none'});
+            $("#assistant_information").hide();
+            $(".assistance_img").hide();
+
           });
 
           // Now load the study.json
@@ -162,3 +168,9 @@ resizeMain();
 document.body.addEventListener('touchmove', function(e) {
   e.preventDefault();
 });
+
+function avator_animation () {
+  $(".assistance_img").show( "slide", 500, function() {
+    $("#assistant_information").show( "slide", {direction: "right"}, 1000)
+  })
+}
