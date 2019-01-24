@@ -1,8 +1,8 @@
 {
   "name": "prototype-breast-screening",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "main": "src/js/index.js",
-  "description": "MIMBCD-UI Prototype Breast Screening",
+  "description": "MIDA Prototype Breast Screening",
   "keywords": [
     "DICOM",
     "WADO",
@@ -10,11 +10,11 @@
     "imaging"
   ],
   "author": "Francisco Maria Calisto",
-  "homepage": "https://github.com/MIMBCD-UI/prototype-multi-modality",
-  "license": "MIT",
+  "homepage": "https://github.com/mida-project/prototype-multi-modality",
+  "license": "ACADEMIC & COMMERCIAL",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MIMBCD-UI/prototype-multi-modality"
+    "url": "https://github.com/mida-project/prototype-multi-modality"
   },
   "scripts": {
     "test": "jest",

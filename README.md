@@ -1,4 +1,4 @@
-# MIMBCD-UI Multi-Modality Assistant Prototype
+# MIDA Multi-Modality Assistant Prototype
 
 <img src="https://github.com/MIMBCD-UI/prototype-multi-modality/blob/master/assets/banner.png?raw=true"/>
 
