@@ -1,8 +1,8 @@
 {
-  "name": "prototype-breast-screening",
+  "name": "prototype-multi-modality-assistant",
   "version": "1.2.0",
   "main": "src/js/index.js",
-  "description": "MIDA Prototype Breast Screening",
+  "description": "MIDA Prototype Multi-Modality Assistant",
   "keywords": [
     "DICOM",
     "WADO",
@@ -10,11 +10,11 @@
     "imaging"
   ],
   "author": "Francisco Maria Calisto",
-  "homepage": "https://github.com/mida-project/prototype-multi-modality",
+  "homepage": "https://github.com/mida-project/prototype-multi-modality-assistant",
   "license": "ACADEMIC & COMMERCIAL",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mida-project/prototype-multi-modality"
+    "url": "https://github.com/mida-project/prototype-multi-modality-assistant"
   },
   "scripts": {
     "test": "jest",
