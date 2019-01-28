@@ -83,10 +83,8 @@ var fileName = '../common/studyList';
 var fileFormat = '.json';
 var studyListFile = fileName + fileFormat;
 
-// Abdus 
-  $("#assistant_information").hide();
-  $(".assistance_img").hide();
-// End Abdus 
+$("#assistant_information").hide();
+$(".assistance_img").hide();
 
 var viewportTemplate; // the viewport template
 loadTemplate(viewportPath, function(element) {
