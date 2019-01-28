@@ -179,7 +179,7 @@ a.list-group-item.active:focus {
     padding: 3px 10px;
 }
 
-.closeBtn{
+.closeBtn {
     background-color: #424242;
     float: right;
     color: #ffffff;
@@ -192,21 +192,23 @@ a.list-group-item.active:focus {
 }
 
 
-.med_ass_pre_test{
+/* Assistant Modification */
+.med_ass_pre_test {
     color: #ffffffad;
     border: 2px dotted #ffffffad;
     border-style: dotted solid;
-    border-radius: 25px 0px 67px 0px;
-    padding: 10px;
+    border-radius: 25px 0px 60px 9px;
+    padding: 10px 11px 4px 4px;
     float: right;
     margin-bottom: -8px;
+    width: 329.55px;
 }
 
-.assistance_img{
+.assistance_img {
     float: right;
     margin-right: -10px;
 }
-.cancer_parcentage,.cancerBirads{
+.cancer_parcentage,.cancerBirads {
     color: red ;
     
 }
@@ -214,6 +216,14 @@ a.list-group-item.active:focus {
 .nav-tabs {
     margin-top: -5px;
 }
-.nav>#assistance:hover{
+.nav>#assistance:hover {
     opacity: 100% !important;
 }
+.cancer_parcentage{
+    color: red;
+}
+@media only screen and (max-width: 970px) {
+    .assistant_information{
+        display: none !important;
+    }
+  }
