@@ -7,8 +7,8 @@ var fileName = '../common/studyList';
 var fileFormat = '.json';
 var studyListFile = fileName + fileFormat;
 
-$("#assistant_information").hide();
-$(".assistance_img").hide();
+// $("#assistant_information").hide();
+// $(".assistance_img").hide();
 
 var viewportTemplate; // the viewport template
 loadTemplate(viewportPath, function(element) {
@@ -40,7 +40,7 @@ var v012 = "% </span> ";
 var v013 = "!! <br />";
 var v014 = ": <span style='color:red'>";
 var v015 = "</span>";
-var v016 = "Sorry i have no infomation about the patient! <br />";
+var v016 = "Sorry i have no infomation about the patient! ";
 var v017 = " <span />";
 
 /* ================================================== */
@@ -93,15 +93,18 @@ $.getJSON(studyListFile, function(data) {
                   let msg3 = messageText.assisMessage[0].message_003;
                   let msg4 = messageText.assisMessage[0].message_004;
                   let msg5 = messageText.assisMessage[0].message_005;
-                  $('.assistant_information').css({display:"block"});
+                  
+                  // Show the accept and reject buttons & the assistant block @Abdus Samad--
+                  $(".accept-btn, .reject-btn").show();
+                  $('.assistant_block').css({display:"block"});
                   var p005 = msg1 + v011 + msg2 + v009 + msg3 + v010;
                   var p006 = v012 + msg4 + v013 + msg5 + v014;
                   let assistantText = p005 + cancerChance + p006 + biradsPhys + v015;
                   // display text if any data for the patient 
                   document.getElementById("assistant_information").innerHTML = assistantText;
-                  avator_animation();
+                  assistant_animation_in();
                 })
-
+ 
               })
               .fail(function(jqXHR, textStatus) {
                 if (textStatus == 'parsererror') {
@@ -110,10 +113,15 @@ $.getJSON(studyListFile, function(data) {
                     let warn1 = messageText.assisWarning[0].warning_001;
                     let warn2 = messageText.assisWarning[0].warning_002;
                     let warn3 = messageText.assisWarning[0].warning_003;
-                    $('.assistant_information').css({display:"block"});
+                    $('.assistant_block').css({display:"block"});
                     let failAssistantText = v016 + warn1 + v017 + warn2 + warn3;
                     document.getElementById("assistant_information").innerHTML = failAssistantText;
-                    avator_animation();
+                    
+                    // Hide the Approve and Reject Btn
+                    $(".accept-btn, .reject-btn").hide();
+                    
+                    // Transition of assistant block---
+                    assistant_animation_in();
                   })
                 }
             })
@@ -154,10 +162,9 @@ $.getJSON(studyListFile, function(data) {
             if($(tabDataElement).length > 0){
               $(tabDataElement)[0].remove();
             }
-            // Close Assistant
-            // $('.assistant_information').css({display:'none'});
-            $("#assistant_information").hide();
-            $(".assistance_img").hide();
+            // Close Assistant block
+            $('.assistant_block').css({display:'none'});
+            assistant_animation_out();
 
           });
 
@@ -177,7 +184,6 @@ $('#tabs a').click (function(e) {
   e.preventDefault();
   $(this).tab('show');
 });
-
 // Resize main
 function resizeMain() {
   var height = $(window).height();
@@ -197,7 +203,19 @@ document.body.addEventListener('touchmove', function(e) {
 });
 
 // Assistant Avatar Animation
-function avator_animation () {
-  $("#assistant_information").fadeIn();
-  $(".assistance_img").fadeIn()
+function assistant_animation_in() {
+  $(".assistant_block").delay(800).animate({
+    right: '20px',
+    opacity: '1'
+
+  });
 }
+// Assistant Avatar Animation
+function assistant_animation_out() {
+  $(".assistant_block").delay(1).animate({
+    opacity: '0',
+    right: '-150px'
+  });
+}
+// Assistant switch -------
+
