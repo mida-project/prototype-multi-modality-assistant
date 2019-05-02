@@ -224,6 +224,12 @@ a.list-group-item.active:focus {
 .assistance_img {
 
 }
+.switch{
+    margin-top: 5px;
+}
+.accept-btn, .reject-btn, .explain-btn{
+    border: none;
+}
 .cancer_parcentage,.cancerBirads {
     color: red ;
     

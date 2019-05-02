@@ -99,7 +99,7 @@ $.getJSON(studyListFile, function(data) {
                   $('.assistant_block').css({display:"block"});
                   var p005 = msg1 + v011 + msg2 + v009 + msg3 + v010;
                   var p006 = v012 + msg4 + v013 + msg5 + v014;
-                  let assistantText = p005 + cancerChance + p006 + biradsPhys + v015;
+                  let assistantText = p005 + cancerChance + p006 + biradsAssis + v015;
                   // display text if any data for the patient 
                   document.getElementById("assistant_information").innerHTML = assistantText;
                   assistant_animation_in();
@@ -189,7 +189,7 @@ function resizeMain() {
   var height = $(window).height();
   $('#main').height(height - 50);
   $('#tabContent').height(height - 50 - 42);
-}
+} 
 
 // Call resize main on window resize
 $(window).resize(function() {
