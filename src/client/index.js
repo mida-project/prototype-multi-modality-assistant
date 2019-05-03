@@ -103,7 +103,7 @@ $.getJSON(studyListFile, function(data) {
                   // display text if any data for the patient 
                   document.getElementById("assistant_information").innerHTML = assistantText;
                   assistant_animation_in();
-                })
+                }) 
  
               })
               .fail(function(jqXHR, textStatus) {

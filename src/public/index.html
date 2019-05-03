@@ -42,30 +42,32 @@
     href="https://github.com/MIMBCD-UI/mimbcd-ui.github.io/blob/master/images/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16"
     href="https://github.com/MIMBCD-UI/mimbcd-ui.github.io/blob/master/images/favicon-16x16.png">
-  <link rel="manifest" href="https://github.com/MIMBCD-UI/mimbcd-ui.github.io/blob/master/images/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage"
+    <link rel="manifest" href="https://github.com/MIMBCD-UI/mimbcd-ui.github.io/blob/master/images/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage"
     content="https://github.com/MIMBCD-UI/mimbcd-ui.github.io/blob/master/images/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- CSS -->
+    
+    
+    <!-- Font awesome CSS for tool icons -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Cornerstone Demo CSS -->
+    <link href="../client/css/style.css" rel="stylesheet">
 
-  <!-- CSS -->
-
-
-  <!-- Font awesome CSS for tool icons -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-  <!-- Bootstrap CSS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Cornerstone Demo CSS -->
-  <link href="../client/css/style.css" rel="stylesheet">
-
-  <!-- Hotjar Tracking Code -->
-  <script src="../server/utils/hotjar.js" type="module"></script>
-
-
-</head>
-
+    <!-- Hotjar Tracking Code -->
+    <script src="../server/utils/hotjar.js" type="module"></script>
+    
+    <!-- Assistant Button setup @abdus Samad -->
+    <script src="../client/assistant.js"></script>
+    
+  </head>
+  
 <body>
 
   <div id="wrap">
@@ -96,9 +98,9 @@
               <!--- Creating New Div -->
               <div class="info_n_btn">
                 <p class="med_ass_pre_test" id="assistant_information"></p>
-                <button class="accept-btn btn-success">Accept</button>
-                <button class="reject-btn btn-danger">Reject</button>
-                <button class="explain-btn btn-info">Explain</button>
+                <button class="accept-btn btn-success" onclick="accept_assistant_result()">Accept</button>
+                <button class="reject-btn btn-danger" onclick="reject_assistant_rerult()">Reject</button>
+                <button class="explain-btn btn-info" > <a href="http://google.com" target="_blank" rel="noopener noreferrer">Explain</a></button>
               </div>
               <div class="logo_n_Btn">
                 <i class="fa fa-user-md assistance_img" style="font-size: 70px; color:rgba(240, 240, 240, 0.72)"></i>
@@ -106,10 +108,7 @@
                   <input id="switchInput" onClick="assistantSwitch()" type="checkbox" checked>
                   <span class="slider round"></span>
                 </label>
-
               </div>
-
-
             </div>
           </div>
 
@@ -199,6 +198,7 @@
   <!-- =============================== -->
 
   <!-- include Client viewports -->
+
   <script src="../client/viewport/setupViewport.js"></script>
 
   <script src="../client/tools/displayThumbnail.js"></script>
@@ -215,7 +215,6 @@
   <script src="../client/loaders/loadList.js" type="module"></script>
   <script src="../client/index.js" type="module"></script>
   <script src="../client/main.js" type="module"></script>
-  <script src="../client/assistant.js" type="module"></script>
 
   <!-- =============================== -->
   <!-- =============================== -->
@@ -251,5 +250,4 @@
   <!-- =============================== -->
 
 </body>
-
 </html>

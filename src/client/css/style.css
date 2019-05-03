@@ -201,6 +201,7 @@ a.list-group-item.active:focus {
 }
 .assistant_block{
     width: 270px;
+    height: 122px;
     background: rgba(29, 28, 28, 0.66);
     border: 1px solid #5f5f5f;;
     padding: 4px;
@@ -208,13 +209,13 @@ a.list-group-item.active:focus {
 }
 .info_n_btn{
     color: #ffffffad;
-    width: 75%;
+    width: 194.5px;
     height: 100%;
     display: inline-block;
     align-items: center;
 }
 .logo_n_Btn {
-    width: 25%;
+    width: 64.5px;
     height: 100%;
     float: right;
     direction: rtl;
@@ -229,6 +230,10 @@ a.list-group-item.active:focus {
 }
 .accept-btn, .reject-btn, .explain-btn{
     border: none;
+}
+.explain-btn > a{
+    color: inherit;
+    text-decoration: inherit;
 }
 .cancer_parcentage,.cancerBirads {
     color: red ;
