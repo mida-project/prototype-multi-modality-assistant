@@ -24,6 +24,7 @@
     "build": "webpack -p &",
     "build:local": "webpack -p &",
     "build:multi": "webpack -p &",
+    "build:uta7": "webpack -p &",
     "create:sl": "touch src/common/studyList.json",
     "clean:dataset": "rimraf dataset/*",
     "clean:studies": "rimraf src/common/studies/*",
@@ -36,6 +37,7 @@
     "start:webdash": "npx webdash serve",
     "start:local": "npm run build:local && npm run server && start:webdash",
     "start:multi": "npm run build:multi && npm run server && start:webdash",
+    "start:uta7": "npm run build:uta7 && npm run server && start:webdash",
     "start": "npm run server"
   },
   "devDependencies": {
