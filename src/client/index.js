@@ -78,7 +78,7 @@ $.getJSON(studyListFile, function(data) {
           var studyTab = v004 + c001 + v005 + c001 + v006 + v007 + v008;
 
           // JSON File Path
-          var jsonFileUrl = "../common/dataset/" + c001 + ".json";
+          var jsonFileUrl = "../../../dataset-severity-chances/dataset_anon/" + c001 + ".json";
           var messageUrl = "../common/messages/assistant_msg.json";
           $.getJSON(jsonFileUrl)
             .done(function(individualPatientData) {
