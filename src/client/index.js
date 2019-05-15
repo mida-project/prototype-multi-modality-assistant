@@ -1,3 +1,5 @@
+//var path = require('path');
+
 // Load in HTML templates
 var viewportPath = "../public/templates/viewport.html";
 var studyViewerPath = "../public/templates/studyViewer.html";
@@ -6,6 +8,9 @@ var studyViewerPath = "../public/templates/studyViewer.html";
 var fileName = '../common/studyList';
 var fileFormat = '.json';
 var studyListFile = fileName + fileFormat;
+
+
+var pathToOutputs = "../common/outputs/";
 
 // $("#assistant_information").hide();
 // $(".assistance_img").hide();
@@ -78,7 +83,8 @@ $.getJSON(studyListFile, function(data) {
           var studyTab = v004 + c001 + v005 + c001 + v006 + v007 + v008;
 
           // JSON File Path
-          var jsonFileUrl = "../../../dataset-severity-chances/dataset_anon/" + c001 + ".json";
+          var jsonFileUrl = pathToOutputs + c001 + ".json";
+          console.log(jsonFileUrl)
           var messageUrl = "../common/messages/assistant_msg.json";
           $.getJSON(jsonFileUrl)
             .done(function(individualPatientData) {

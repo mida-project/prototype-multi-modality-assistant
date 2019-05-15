@@ -6,7 +6,7 @@
       "transferProtocol": "http",
       "hostname": "localhost",
       "portEscape": ":",
-      "port": "8548",
+      "port": "8048",
       "suffix": "/",
       "serviceProtocol": "wadouri"
     }
