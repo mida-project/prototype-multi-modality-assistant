@@ -2,18 +2,18 @@
 
     "assisMessage" : [
         {
-          "message_001": "Hello there!",
-          "message_002": "I am your Assistant",
-          "message_003": "This Patient has",
-          "message_004": "chance of having Cancer!",
-          "message_005": "The estimeted BI-RADS is"
+          "message_001": "Hello!",
+          "message_002": "I am your Assistant.",
+          "message_003": "For this patient I am",
+          "message_004": "sure of being right.",
+          "message_005": "My estimeted BIRADS is"
         }
     ],
 
     "assisWarning" : [
         {
           "warning_001": "Do you need help?",
-          "warning_002": "Please contact to the admin of the system.",
+          "warning_002": "Please contact the admin of the system.",
           "warning_003": "Thanks!"
         }
     ]
