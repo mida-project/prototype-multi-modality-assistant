@@ -62,14 +62,12 @@ $.getJSON(studyListFile, function(data) {
       var c004 = study.studyDescription;
       var c005 = study.numImages;
       var c006 = study.studyId
-      //console.log("Creating study list tables...");
       // Create one table row for each study in the manifest
       var p001 = v001 + c001 + v002;
       var p002 = c002 + v002 + c003;
       var p003 = v002 + c004 + v002;
       var p004 = c005 + v002 + v003;
       var studyRow = p001 + p002 + p003 + p004;
-
       // Append the row to the study list
       var studyRowElement = $(studyRow).appendTo('#studyListData');
 
@@ -84,7 +82,8 @@ $.getJSON(studyListFile, function(data) {
 
           // JSON File Path
           var jsonFileUrl = pathToOutputs + c001 + ".json";
-          console.log(jsonFileUrl)
+          patientID = c001;
+          
           var messageUrl = "../common/messages/assistant_msg.json";
           $.getJSON(jsonFileUrl)
             .done(function(individualPatientData) {

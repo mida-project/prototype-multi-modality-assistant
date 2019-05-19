@@ -235,8 +235,8 @@ a.list-group-item.active:focus {
     color: inherit;
     text-decoration: inherit;
 }
-.cancer_parcentage, .cancerBirads {
-    color: #f39c12;
+.cancer_parcentage,.cancerBirads {
+    color: red ;
     
 }
 /* Ovverride design  */

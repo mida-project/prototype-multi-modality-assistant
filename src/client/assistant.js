@@ -28,20 +28,34 @@ function assistantSwitch(){
 // Assistant Information Buttons functionality
   // Accept result
     function accept_assistant_result() {
-        // alert("Accept");
-        var jsonFileUrl = "../common/dataset/" + '1E60E211-42B6-4556-A1F6-223E85AD38A6' + ".json";
-
-        $.getJSON(jsonFileUrl)
-            .done(function(individualPatientData) {
-                let biradsAssis = individualPatientData.patient[0].biradsAssis;
-                let biradsPhys = individualPatientData.patient[0].biradsPhys;
-                alert(biradsPhys);
-                 biradsPhys = biradsAssis;
-                alert(biradsPhys);
-                
-            })
+        $.ajax
+        ({
+            type: "POST",
+            url: "/updatebiradsphys", 
+            crossDomain:true, 
+            dataType: "json",
+            data:  JSON.stringify({patientID: patientID})
+        }).done(function ( data ) {
+            alert(data.result)
+        })
+        
     }
   // reject Result
     function reject_assistant_rerult() {
-        alert("reject");
+        
     }
+
+    function rejectPatient() {
+        
+        $.ajax
+        ({
+            type: "POST",
+            url: "/rejectbiradsphys", 
+            crossDomain:true, 
+            dataType: "json",
+            data:  JSON.stringify({patientID: patientID,biradsPhys:$('#selectbiradsPhys').val()})
+        }).done(function ( data ) {
+            alert(data.result)
+        })
+    }
+    

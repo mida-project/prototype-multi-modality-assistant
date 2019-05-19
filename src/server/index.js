@@ -59,6 +59,7 @@ var datasetFilePath = 'dataset/';
 
 var portValue = requests.getPortValue();
 
+
 /* ================================================== */
 /* ================================================== */
 /* ================================================== */
@@ -212,5 +213,60 @@ http.createServer(function(request, response) {
       response.end(content, 'utf-8');
     }
   });
+
+  if(request.url =='/updatebiradsphys'){
+    var store = '';
+    response.writeHead(200, {"Content-Type": "text/json"});
+    request.on('data', function(data) 
+    {
+        store += data;
+    });
+    request.on('end', function() 
+    {
+       store = JSON.parse(store);
+        var jsonFileUrl = "src/common/outputs/" + store.patientID + ".json";
+        
+        fs.readFile(jsonFileUrl, (err, data) => {  
+          if (err) throw err;
+          let student
+          student = JSON.parse(data);
+          var d = student.patient;
+          d[0].biradsAssis = d[0].biradsPhys;
+          fs.writeFileSync(jsonFileUrl, JSON.stringify(student)); 
+        });
+    });
+    var json = JSON.stringify({ 
+      result: 'success'
+    });
+    response.end(json);
+  }
+  if(request.url =='/rejectbiradsphys'){
+    var store = '';
+    
+    request.on('data', function(data) 
+    {
+        store += data;
+    });
+    request.on('end', function() 
+    {
+       store = JSON.parse(store);
+        var jsonFileUrl = "src/common/outputs/" + store.patientID + ".json";
+        
+        fs.readFile(jsonFileUrl, (err, data) => {  
+          if (err) throw err;
+          let student
+          student = JSON.parse(data);
+          var d = student.patient;
+          d[0].biradsPhys = store.biradsPhys;
+          fs.writeFileSync(jsonFileUrl, JSON.stringify(student)); 
+        });
+       
+    });
+    var json = JSON.stringify({ 
+      result: 'success'
+    });
+    response.end(json);
+  }
+
 
 }).listen(portValue);
