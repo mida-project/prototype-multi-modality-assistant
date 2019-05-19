@@ -231,8 +231,9 @@ http.createServer(function(request, response) {
           let student
           student = JSON.parse(data);
           var d = student.patient;
-          d[0].biradsAssis = d[0].biradsPhys;
-          fs.writeFileSync(jsonFileUrl, JSON.stringify(student)); 
+          d[0].biradsPhys = d[0].biradsAssis;
+          
+          fs.writeFileSync(jsonFileUrl, JSON.stringify(student, null, '\t')); 
         });
     });
     var json = JSON.stringify({ 
@@ -258,7 +259,7 @@ http.createServer(function(request, response) {
           student = JSON.parse(data);
           var d = student.patient;
           d[0].biradsPhys = store.biradsPhys;
-          fs.writeFileSync(jsonFileUrl, JSON.stringify(student)); 
+          fs.writeFileSync(jsonFileUrl, JSON.stringify(student, null, '\t')); 
         });
        
     });
