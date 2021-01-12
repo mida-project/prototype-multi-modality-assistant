@@ -54,7 +54,7 @@
     "grunt-contrib-uglify": "^4.0.1",
     "grunt-contrib-watch": "^1.1.0",
     "html-webpack-plugin": "^3.2.0",
-    "jest": "^24.7.1",
+    "jest": "^26.6.3",
     "jshint": "^2.10.2",
     "jshint-loader": "^0.8.4",
     "load-grunt-tasks": "^4.0.0",
@@ -65,7 +65,7 @@
     "webdash-package-json": "^1.3.1",
     "webdash-performance-budget": "^1.3.0",
     "webdash-pwa-manifest": "^1.3.0",
-    "webpack": "^4.30.0",
+    "webpack": "^5.13.0",
     "webpack-dev-server": "^3.11.1"
   },
   "dependencies": {
