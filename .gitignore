@@ -80,6 +80,10 @@ src/common/studyList.json
 # Dataset Information
 dataset/*
 
+# Common Assistant Messages
+src/common/messages/*
+!src/common/messages/assistant_msg.json
+
 # Common Outputs
 src/common/outputs/*
 !src/common/outputs/sample.json
