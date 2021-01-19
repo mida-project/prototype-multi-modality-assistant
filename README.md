@@ -1,8 +1,8 @@
 # MIDA Multi-Modality Assistant Prototype
 
-<img src="https://github.com/MIMBCD-UI/prototype-multi-modality/blob/master/assets/banner.png?raw=true"/>
+<img src="https://github.com/MIMBCD-UI/prototype-multi-modality-assistant/blob/master/assets/banner.png?raw=true"/>
 
-[MIMBCD-UI](https://mimbcd-ui.github.io/) is a Research Project that deals with the use of a recently proposed technique in literature: [Deep Convolutional Neural Networks (CNNs)](https://en.wikipedia.org/wiki/Convolutional_neural_network). These deep networks will incorporate information from several different modes by a User Interface (UI) implemented based on our [Prototype Breast Screening](https://github.com/MIMBCD-UI/prototype-breast-screening) repository. The hereby repository is a mirror of our [Prototype Breast Screening](https://github.com/MIMBCD-UI/prototype-breast-screening) repository which is an Open Source Project with the goal to deliver an example of web based medical imaging platform for the breast cancer diagnosis. We also have several demos to see in our [YouTube Channel](https://www.youtube.com/channel/UCPz4aTIVHekHXTxHTUOLmXw), please follow us.
+[MIMBCD-UI](https://mimbcd-ui.github.io/) is a research work that deals with the use of a recently proposed technique in literature: [Deep Convolutional Neural Networks (CNNs)](https://en.wikipedia.org/wiki/Convolutional_neural_network). These deep networks will incorporate information from several different modes by a User Interface (UI) implemented based on our [Prototype Breast Screening](https://github.com/MIMBCD-UI/prototype-breast-screening) repository. The hereby repository is a mirror of our [Prototype Breast Screening](https://github.com/MIMBCD-UI/prototype-breast-screening) repository which is an Open Source Project with the goal to deliver an example of web based medical imaging platform for the breast cancer diagnosis. We also have several demos to see in our [YouTube Channel](https://www.youtube.com/channel/UCPz4aTIVHekHXTxHTUOLmXw), please follow us.
 
 
 ## Instructions
@@ -156,9 +156,11 @@ Copyright © 2017 [Instituto Superior Técnico (IST)](https://tecnico.ulisboa.pt
 
 The [`prototype-multi-modality-assistant`](https://github.com/MIMBCD-UI/prototype-multi-modality-assistant) repository is distributed under the terms of both [Academic License](https://github.com/MIMBCD-UI/prototype-multi-modality-assistant/blob/master/ACADEMIC.md) and [Commercial License](https://github.com/MIMBCD-UI/prototype-multi-modality-assistant/blob/master/COMMERCIAL.md), for academic and commercial purpose, respectively. For more information regarding the [License](https://github.com/MIMBCD-UI/prototype-multi-modality-assistant/blob/master/LICENSE.md) of the hereby repository, just follow both [ACADEMIC](https://github.com/MIMBCD-UI/prototype-multi-modality-assistant/blob/master/ACADEMIC.md) and [COMMERCIAL](https://github.com/MIMBCD-UI/prototype-multi-modality-assistant/blob/master/COMMERCIAL.md) files.
 
-### Acknowledgments
+#### Acknowledgments
 
 A special thanks to [Chris Hafey](https://www.linkedin.com/in/chafey/), the propelling person of [CornerstoneJS](https://cornerstonejs.org/), who also developed the [cornerstoneDemo](https://github.com/chafey/cornerstoneDemo). Not forgetting the three supporters of the CornerstoneJS library, [Aloïs Dreyfus](https://www.linkedin.com/in/alois-dreyfus), [Danny Brown](http://dannyrb.com/) and [Erik Ziegler](https://www.npmjs.com/~swederik). We also would like to give a special thanks to [Erik Ziegler](https://www.npmjs.com/~swederik) who support several [issues](https://groups.google.com/forum/#!forum/cornerstone-platform) during this path.
+
+List of important people to acknowledgment:
 
 - [Aloïs Dreyfus](https://www.linkedin.com/in/alois-dreyfus) ([adreyfus](https://github.com/adreyfus))
 
@@ -175,3 +177,125 @@ A special thanks to [Chris Hafey](https://www.linkedin.com/in/chafey/), the prop
 - [Sébastien Jodogne](https://www.linkedin.com/in/jodogne/) ([jodogne](https://github.com/jodogne))
 
 - [Steve Pieper](https://lmi.med.harvard.edu/people/steve-pieper)
+
+### Supporting
+
+Our organization is a non-profit organization. However, we have many needs across our activity. From infrastructure to service needs, we need some time and contribution, as well as help, to support our team and projects.
+
+<span>
+  <a href="https://opencollective.com/oppr" target="_blank">
+    <img src="https://opencollective.com/oppr/tiers/backer.svg" width="220">
+  </a>
+</span>
+
+#### Contributors
+
+This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
+
+<span class="image">
+  <a href="graphs/contributors">
+    <img src="https://opencollective.com/oppr/contributors.svg?width=890" />
+  </a>
+</span>
+
+#### Backers
+
+Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/oppr#backer)]
+
+<span>
+  <a href="https://opencollective.com/oppr#backers" target="_blank">
+    <img src="https://opencollective.com/oppr/backers.svg?width=890">
+  </a>
+</span>
+
+#### Sponsors
+
+Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/oppr#sponsor)]
+
+<span>
+  <a href="https://opencollective.com/oppr/sponsor/0/website" target="_blank">
+    <img src="https://opencollective.com/oppr/sponsor/0/avatar.svg">
+  </a>
+</span>
+
+<br />
+
+<span>
+  <a href="http://www.fct.pt/" title="FCT" target="_blank">
+    <img src="https://github.com/mida-project/meta/blob/master/brands/fct_footer.png?raw=true" alt="fct" width="20%" />
+  </a>
+</span>
+<span>
+  <a href="https://www.fccn.pt/en/" title="FCCN" target="_blank">
+    <img src="https://github.com/mida-project/meta/blob/master/brands/fccn_footer.png?raw=true" alt="fccn" width="20%" />
+  </a>
+</span>
+<span>
+  <a href="https://www.ulisboa.pt/en/" title="ULisboa" target="_blank">
+    <img src="https://github.com/mida-project/meta/blob/master/brands/ulisboa_footer.png?raw=true" alt="ulisboa" width="20%" />
+  </a>
+</span>
+<span>
+  <a href="http://tecnico.ulisboa.pt/" title="IST" target="_blank">
+    <img src="https://github.com/mida-project/meta/blob/master/brands/ist_footer.png?raw=true" alt="ist" width="20%" />
+  </a>
+</span>
+<span>
+  <a href="http://hff.min-saude.pt/" title="HFF" target="_blank">
+    <img src="https://github.com/mida-project/meta/blob/master/brands/hff_footer.png?raw=true" alt="hff" width="20%" />
+  </a>
+</span>
+
+##### Departments
+
+<span>
+  <a href="http://dei.tecnico.ulisboa.pt" title="DEI" target="_blank">
+    <img src="https://github.com/mida-project/meta/blob/master/brands/dei_footer.png?raw=true" alt="dei" width="20%" />
+  </a>
+</span>
+<span>
+  <a href="http://deec.tecnico.ulisboa.pt" title="DEEC" target="_blank">
+    <img src="https://github.com/mida-project/meta/blob/master/brands/deec_footer.png?raw=true" alt="dei" width="20%" />
+  </a>
+</span>
+
+##### Laboratories
+
+<span>
+  <a href="http://sipg.isr.tecnico.ulisboa.pt/" title="SIPG" target="_blank">
+    <img src="https://github.com/mida-project/meta/blob/master/brands/sipg_footer.png?raw=true" alt="sipg" width="20%" />
+  </a>
+</span>
+<span>
+  <a href="http://welcome.isr.tecnico.ulisboa.pt/" title="ISR" target="_blank">
+    <img src="https://github.com/mida-project/meta/blob/master/brands/isr-lisboa_footer.png?raw=true" alt="isr" width="20%" />
+  </a>
+</span>
+<span>
+  <a href="http://larsys.pt/" title="LARSys" target="_blank">
+    <img src="https://github.com/mida-project/meta/blob/master/brands/larsys_footer.png?raw=true" alt="larsys" width="20%" />
+  </a>
+</span>
+<span>
+  <a href="https://www.m-iti.org/" title="M-ITI" target="_blank">
+    <img src="https://github.com/mida-project/meta/blob/master/brands/iti_footer.png?raw=true" alt="iti" width="20%" />
+  </a>
+</span>
+<span>
+  <a href="http://www.inesc-id.pt/" title="INESC-ID" target="_blank">
+    <img src="https://github.com/mida-project/meta/blob/master/brands/inesc-id_footer.png?raw=true" alt="inesc-id" width="20%" />
+  </a>
+</span>
+
+##### Domain
+
+<span>
+  <a href="https://europa.eu/" title="EU" target="_blank">
+    <img src="https://github.com/mida-project/meta/blob/master/brands/eu_footer.png?raw=true" alt="eu" width="20%" />
+  </a>
+</span>
+<span>
+  <a href="https://www.portugal.gov.pt/" title="Portugal" target="_blank">
+    <img src="https://github.com/mida-project/meta/blob/master/brands/pt_footer.png?raw=true" alt="pt" width="20%" />
+  </a>
+</span>
