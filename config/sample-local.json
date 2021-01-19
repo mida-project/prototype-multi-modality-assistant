@@ -6,7 +6,7 @@
       "transferProtocol": "http",
       "hostname": "localhost",
       "portEscape": ":",
-      "port": "8048",
+      "port": "8248",
       "suffix": "/",
       "serviceProtocol": "wadouri"
     }
@@ -18,7 +18,7 @@
       "transferProtocol": "http",
       "hostname": "localhost",
       "portEscape": ":",
-      "port": "8086",
+      "port": "8286",
       "suffix": "/",
       "hotjar": "850630"
     }

@@ -1,8 +1,8 @@
 # MIDA Multi-Modality Assistant Prototype
 
-<img src="https://github.com/MIMBCD-UI/prototype-multi-modality-assistant/blob/master/assets/banner.png?raw=true"/>
+<img src="https://github.com/mida-project/prototype-multi-modality-assistant/blob/master/assets/banner.png?raw=true"/>
 
-[![Last commit](https://img.shields.io/github/last-commit/MIMBCD-UI/prototype-multi-modality-assistant?style=flat-square)](https://github.com/MIMBCD-UI/prototype-multi-modality-assistant/commits/master)
+[![Last commit](https://img.shields.io/github/last-commit/mida-project/prototype-multi-modality-assistant?style=flat-square)](https://github.com/mida-project/prototype-multi-modality-assistant/commits/master)
 [![OpenCollective](https://opencollective.com/oppr/backers/badge.svg?style=flat-square)](#backers)
 [![OpenCollective](https://opencollective.com/oppr/sponsors/badge.svg?style=flat-square)](#sponsors)
 [![Gitter](https://img.shields.io/gitter/room/gitterHQ/gitter.svg?style=flat-square)](https://gitter.im/opprTeam)
@@ -16,138 +16,179 @@ The assistant provides three main functionalities: (1) **Accept**, if the clinic
 
 The prototype was developed with [CornerstoneJS](https://cornerstonejs.org/) technologies, a complete web based platform for medical imaging. Furthermore, this prototype and repository was firstly developed and evaluated for the purpose of the [User Tests and Analysis 7 (UTA7)](https://github.com/MIMBCD-UI/meta/wiki/User-Research#user-test-evaluations-) study under our research work. Several [Datasets](https://github.com/MIMBCD-UI/meta/wiki/Datasets) are fostering this [UTA7](https://github.com/MIMBCD-UI/meta/wiki/User-Research#user-test-evaluations-) evaluation, therefore, it is important to also address it here.
 
-For the [UTA7](https://github.com/MIMBCD-UI/meta/wiki/User-Research#user-test-evaluations-) study and tasks, the [`dataset-uta7-dicom`](https://github.com/MIMBCD-UI/dataset-uta7-dicom) repository has a sampling of medical images that was used under this study. Next, a group of radiologists annotated these medical images and the *dataset* can be found inside the [`dataset-uta7-annotations`](https://github.com/MIMBCD-UI/dataset-uta7-annotations) repository. Finally, we computed and generated the *heatmaps* which can be found inside the [`dataset-uta7-heatmaps`](https://github.com/MIMBCD-UI/dataset-uta7-heatmaps) repository. We also used for comparison, both [`prototype-multi-modality`](https://github.com/MIMBCD-UI/prototype-multi-modality) and [`prototype-heatmap`](https://github.com/mida-project/prototype-heatmap) repositories. Therefore, the [`prototype-multi-modality-assistant`](https://github.com/MIMBCD-UI/prototype-multi-modality-assistant) should be paired with these two repositories as we did in our research work.
+For the [UTA7](https://github.com/MIMBCD-UI/meta/wiki/User-Research#user-test-evaluations-) study and tasks, the [`dataset-uta7-dicom`](https://github.com/MIMBCD-UI/dataset-uta7-dicom) repository has a sampling of medical images that was used under this study. Next, a group of radiologists annotated these medical images and the *dataset* can be found inside the [`dataset-uta7-annotations`](https://github.com/MIMBCD-UI/dataset-uta7-annotations) repository. Finally, we computed and generated the *heatmaps* which can be found inside the [`dataset-uta7-heatmaps`](https://github.com/MIMBCD-UI/dataset-uta7-heatmaps) repository. We also used for comparison, both [`prototype-multi-modality`](https://github.com/MIMBCD-UI/prototype-multi-modality) and [`prototype-heatmap`](https://github.com/mida-project/prototype-heatmap) repositories. Therefore, the [`prototype-multi-modality-assistant`](https://github.com/mida-project/prototype-multi-modality-assistant) should be paired with these two repositories as we did in our research work.
 
 [MIMBCD-UI](https://mimbcd-ui.github.io/) is a research work that deals with the use of a recently proposed technique in literature: [Deep Convolutional Neural Networks (CNNs)](https://en.wikipedia.org/wiki/Convolutional_neural_network). These deep networks will incorporate information from several different modes and integrated inside a User Interface (UI). The UI was implemented based on our [Prototype Breast Screening](https://github.com/MIMBCD-UI/prototype-breast-screening) repository. The hereby repository is a mirror of our [Prototype Breast Screening](https://github.com/MIMBCD-UI/prototype-breast-screening) repository which is an Open Source solution with the goal to deliver an example of web based medical imaging platform for the breast cancer diagnosis. We also have several demos to see in our [YouTube Channel](https://www.youtube.com/channel/UCPz4aTIVHekHXTxHTUOLmXw), please follow us.
 
+## Citing
 
-## Instructions
+We kindly ask **scientific works and studies** that make use of the repository to cite it in their associated publications. Similarly, we ask **open-source** and **closed-source** works that make use of the repository to warn us about this use.
+
+You can cite our work using the following BibTeX entry:
+
+```
+@inproceedings{10.1145/3399715.3399744,
+author = {Calisto, Francisco Maria and Nunes, Nuno and Nascimento, Jacinto C.},
+title = {BreastScreening: On the Use of Multi-Modality in Medical Imaging Diagnosis},
+year = {2020},
+isbn = {9781450375351},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3399715.3399744},
+doi = {10.1145/3399715.3399744},
+abstract = {This paper describes the field research, design and comparative deployment of a multimodal medical imaging user interface for breast screening. The main contributions described here are threefold: 1) The design of an advanced visual interface for multimodal diagnosis of breast cancer (BreastScreening); 2) Insights from the field comparison of Single-Modality vs Multi-Modality screening of breast cancer diagnosis with 31 clinicians and 566 images; and 3) The visualization of the two main types of breast lesions in the following image modalities: (i) MammoGraphy (MG) in both Craniocaudal (CC) and Mediolateral oblique (MLO) views; (ii) UltraSound (US); and (iii) Magnetic Resonance Imaging (MRI). We summarize our work with recommendations from the radiologists for guiding the future design of medical imaging interfaces.},
+booktitle = {Proceedings of the International Conference on Advanced Visual Interfaces},
+articleno = {49},
+numpages = {5},
+keywords = {user-centered design, breast cancer, human-computer interaction, healthcare systems, multimodality, medical imaging, annotations},
+location = {Salerno, Italy},
+series = {AVI '20}
+}
+```
+
+## Table of contents
+
+* [Prerequisites](#Prerequisites)
+* [Usage](#Usage)
+* [Roadmap](#Roadmap)
+* [Contributing](#Contributing)
+* [License & Copyright](#License--Copyright)
+* [Team](#Team)
+* [Acknowledgements](#Acknowledgements)
+
+## Prerequisites
+
+The following list is showing the required dependencies for this project to run locally:
+
+* [Git](https://git-scm.com/) or any other Git or GitHub version control tool
+* [NodeJS](https://nodejs.org/) (v10.15.3 or newer)
+* [npm](https://www.npmjs.com/) (6.14.4 or newer)
+
+Here are some tutorials and documentation, if needed, to feel more comfortable about using and playing around with this repository:
+
+* [Git Tutorial](https://git-scm.com/docs/gittutorial)
+* [GitHub Quick Tutorial](https://guides.github.com/activities/hello-world/)
+* [NodeJS Documentation](https://nodejs.org/en/docs/)
+
+## Usage
+
+Usage follow the instructions here to setup the current repository and extract the present data. To understand how the hereby repository is used for, read the following steps.
+
+### Instructions
 
 First of all, you will need [NodeJS](https://nodejs.org/) installed locally on your machine. This project needs both [`npm`](https://www.npmjs.com/) and [`http-server`](https://github.com/indexzero/http-server) dependencies to install and run the core project. If you do not have those installed please follow the [`INSTALL`](src/INSTALL.md) instructions.
 
-### DICOM Server
+#### DICOM Server
 
 The following assumes you will be using a [git](https://git-scm.com/) version control for this repository, storing thanks to [GitHub](https://github.com/). First, [Download](https://git-scm.com/downloads) and [Install](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) [git](https://git-scm.com/). Our system needs to be integrated with [WADO-URI](http://dicom.nema.org/dicom/2013/output/chtml/part18/sect_6.3.html) servers, [DICOMWeb](https://www.dicomstandard.org/dicomweb/) servers or any HTTP based server that returns a [DICOM P10](http://www.web3.lu/dicom-standard/) instances. We suggest you to use an [Orthanc](https://www.orthanc-server.com/) server, since it is a simple and powerful [**standalone DICOM server**](https://www.orthanc-server.com/static.php?page=about) by providing a [**RESTful API**](https://en.wikipedia.org/wiki/Representational_state_transfer).
 
+##### Download
+
+1.1.1. Download the DICOM Server by following the next instruction:
+
 You can [download](https://www.orthanc-server.com/download.php) a latest version or you can use our own sample of an [Orthanc](https://www.orthanc-server.com/) version with our examples of patient images. The instructions to use our solution are as follows.
 
-#### Clone
+1.1.2. Follow the [Orthanc Documentation](https://www.orthanc-server.com/static.php?page=documentation) to properly configure your server;
 
-1.1.1. Clone the DICOM Server [repository](https://github.com/MIMBCD-UI/dicom-server):
+1.1.3. Memorize the configured `<port>` number of the [Orthanc](https://www.orthanc-server.com/) which will be important for the [configurations](https://github.com/mida-project/prototype-multi-modality-assistant#configurations) section;
 
-```
-git clone git@github.com:MIMBCD-UI/dicom-server.git
-```
+1.1.4. You will need to populate the [Orthanc](https://www.orthanc-server.com/) server with your own medical images, or you can use our sample from the [`dataset-uta7-dicom`](https://github.com/MIMBCD-UI/dataset-uta7-dicom) repository;
 
-1.1.2. Go inside the project folder:
+#### Main Server
 
-```
-cd dicom-server/
-```
+Our main server uses [NodeJS](https://nodejs.org/en/) and has several [dependencies](https://github.com/mida-project/prototype-multi-modality-assistant/blob/master/package.json). For the following steps you must have already installed both [NodeJS](https://nodejs.org/en/) and [`npm`](https://www.npmjs.com/) in your machine.
 
-#### Install
-
-1.2.1. Install the local dependencies:
-
-```
-npm install
-```
-
-1.2.2. You can now **Run** the project, just follow the [next section](https://github.com/MIMBCD-UI/prototype-multi-modality-assistant#run).
-
-#### Run
-
-1.3.1. Inside the project folder:
-
-```
-cd dicom-server
-```
-
-1.3.2. Start the DICOM Server (Orthanc) for [MacOS](https://www.orthanc-server.com/static.php?page=download-mac):
-
-```
-npm run start:multi
-```
-
-**OR**
-
-```
-cd ..
-cd dicom-server/orthancAndPluginsOSX.stable/
-./startOrthanc.command
-```
-
-**NOTE**: If you are not using [MacOS](https://www.orthanc-server.com/static.php?page=download-mac), for instance, if you are using [Windows](https://www.orthanc-server.com/download-windows.php) or [Debian](https://packages.debian.org/search?keywords=orthanc&searchon=names&exact=1&suite=all&section=all) you have a [documentation](https://www.orthanc-server.com/static.php?page=documentation) for that. Just follow the [Windows](https://www.orthanc-server.com/resources/2015-02-09-emsy-tutorial/index.html) or [Debian](https://packages.debian.org/sid/orthanc) documentations. You also have several [other options](https://www.orthanc-server.com/download.php).
-
-1.3.3. Open the link:
-
-```
-localhost:8248
-```
-
-NOTE: If you need some help see the [Demo](https://youtu.be/tkzpT3KpY2A).
-
-### Main Server
-
-Our main server uses [NodeJS](https://nodejs.org/en/) and has several [dependencies](https://github.com/MIMBCD-UI/prototype-multi-modality-assistant/blob/master/package.json). For the following steps you must have already installed both [NodeJS](https://nodejs.org/en/) and [`npm`](https://www.npmjs.com/) in your machine.
-
-#### Clone
+##### Clone
 
 2.1.1. Clone the project repository:
 
 ```
-git clone git@github.com:MIMBCD-UI/prototype-multi-modality-assistant.git
+git clone git@github.com:mida-project/prototype-multi-modality-assistant.git
 ```
 
-2.1.2. Go inside the project folder:
+2.1.2. Now, you will need to populate both [`src/common/messages/`](src/common/messages/) and [`src/common/outputs/`](src/common/outputs/) folders with your own *dataset* of classifications or you can clone our example:
+
+```
+git clone git@github.com:MIMBCD-UI/dataset-uta7-ai.git
+```
+
+2.1.3. Go inside the project folder:
 
 ```
 cd prototype-multi-modality-assistant/
 ```
 
-#### Install
+2.1.4. Next, run our script by doing:
 
-2.2.1. Install the local dependencies:
+```
+./scripts/filler.sh
+```
+
+##### Configurations
+
+2.2.1. Go inside the [`config/`](config/) folder:
+
+```
+cd config/
+```
+
+2.2.2. Copy the sample version of the `env` file to the new one:
+
+```
+cp sample-env.json env.json
+```
+
+2.2.3. Copy the sample version of the `local` file to the new one:
+
+```
+cp sample-local.json local.json
+```
+
+2.2.4. Change the `<port>` number of this new `local.json` file for the one configured in the 
+
+##### Install
+
+2.3.1. Install the local dependencies:
 
 ```
 npm install
 ```
 
-2.2.2. You can now **Run** the project, just follow the [next section](https://github.com/MIMBCD-UI/prototype-multi-modality-assistant#run).
+2.3.2. You can now **Run** the project, just follow the [next section](https://github.com/mida-project/prototype-multi-modality-assistant#run).
 
-#### Run
+##### Run
 
-2.3.1. Inside the project folder:
+2.4.1. Inside the project folder:
 
 ```
 cd prototype-multi-modality-assistant/
 ```
 
-2.3.2. If you have already run the DICOM Server on a [previous section](https://github.com/MIMBCD-UI/prototype-multi-modality-assistant#dicom-server), please jump to the **2.3.3.** point, otherwise do:
+2.4.2. If you have already run the DICOM Server on a [previous section](https://github.com/mida-project/prototype-multi-modality-assistant#dicom-server), please jump to the **2.3.3.** point, otherwise do:
 
 ```
-npm run dicom-server
+./Orthanc
 ```
 
-2.3.3. Run the code:
+2.4.3. Run the code:
 
 ```
 npm run build:multi
 ```
 
-2.3.4. Start the project:
+2.4.4. Start the project:
 
 ```
 npm run start:multi
 ```
 
-2.3.5. Open the link:
+2.4.5. Open the link:
 
 ```
 localhost:8286/src/public/index.html
 ```
 
-##### Allow-Control-Allow-Origin
+###### Allow-Control-Allow-Origin
 
 Access-Control-Allow-Origin is a [CORS (Cross-Origin Resource Sharing) header](https://www.html5rocks.com/en/tutorials/cors/). If you want to know [How does Access-Control-Allow-Origin header work?](https://stackoverflow.com/questions/10636611/how-does-access-control-allow-origin-header-work) follow the link.
 
@@ -161,18 +202,104 @@ open /Applications/Google\ Chrome.app --args --disable-web-security --user-data-
 
 * Or install the  [CORS](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en) plugin for [Google Chrome](https://www.google.com/intl/en/chrome/browser/desktop/).
 
+## Roadmap
+
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/3819/badge)](https://bestpractices.coreinfrastructure.org/projects/3819)
+
+We need to follow the repository goal, by addressing the thereby information. Therefore, it is of chief importance to scale this solution supported by the repository. The repository solution follows the best practices, achieving the [Core Infrastructure Initiative (CII)](https://bestpractices.coreinfrastructure.org/en/projects/3172) specifications.
+
+Besides that, one of our goals involves creating a configuration file to automatically test and publish our code to pip or any other package manager. It will be most likely prepared for the [GitHub Actions](https://github.com/features/actions). Other goals may be written here in the future.
+
+## Contributing
+
+This project exists thanks to all the people who [contribute](CONTRIBUTING.md). We welcome everyone who wants to help us improve this repository. As follows, we present some suggestions.
+
+### Issuer
+
+Either as something that seems missing or any need for support, just open a [new issue](https://github.com/MIMBCD-UI/prototype-multi-modality-assistant/issues/new). Regardless of being a simple request or a fully-structured feature, we will do our best to understand them and, eventually, solve them.
+
+### Developer
+
+We like to develop, but we also like collaboration. You could ask us to add some features... Or you could want to do it yourself and fork this repository. Maybe even do some side-project of your own. If the latter ones, please let us share some insights about what we currently have.
+
+## Information
+
+The current information will summarize important items of this repository. In this section, we address all fundamental items that were crucial to the current information.
+
+### Related Repositories
+
+The following list, represents the set of related repositories for the presented one:
+
+- [`prototype-heatmap`](https://github.com/mida-project/prototype-heatmap)
+
+- [`prototype-multi-modality`](https://github.com/MIMBCD-UI/prototype-multi-modality)
+
+- [`dataset-uta7-annotations`](https://github.com/MIMBCD-UI/dataset-uta7-annotations)
+
+- [`dataset-uta7-co-variables`](https://github.com/MIMBCD-UI/dataset-uta7-co-variables)
+
+- [`dataset-uta7-dicom`](https://github.com/MIMBCD-UI/dataset-uta7-dicom)
+
+- [`dataset-uta7-heatmaps`](https://github.com/MIMBCD-UI/dataset-uta7-heatmaps)
+
+- [`dataset-uta7-rates`](https://github.com/MIMBCD-UI/dataset-uta7-rates)
+
+- [`dataset-uta4-dicom`](https://github.com/MIMBCD-UI/dataset-uta4-dicom)
+
+- [`dataset-uta9-dicom`](https://github.com/MIMBCD-UI/dataset-uta9-dicom)
+
+- [`dataset-uta10-dicom`](https://github.com/MIMBCD-UI/dataset-uta10-dicom)
+
+### Dataset Resources
+
+To publish our [datasets](https://www.kaggle.com/MIMBCD-UI) we used a well known platform called [Kaggle](https://www.kaggle.com). To access our project's [Profile Page](https://www.kaggle.com/MIMBCD-UI) just follow the [link](https://www.kaggle.com/MIMBCD-UI). Last but not least, you can also follow our work at [data.world](https://data.world/mimbcdui-project), [figshare.com](https://figshare.com/authors/MIMBCD-UI_Project/8674887) and [openml.org](https://www.openml.org/u/11806) platforms.
 
 ## About
 
-For more information about the [MIMBCD-UI](https://mimbcd-ui.github.io/) Project just follow the [link](https://github.com/MIMBCD-UI/meta). Pieces of information about details of this repository are also in a [wiki](https://github.com/MIMBCD-UI/prototype-multi-modality-assistant/wiki). This prototype was developed using several libraries and dependencies. Despite that all libraries had their importance and supported the development, one of it was of chief importance. The [CornerstoneJS](https://cornerstonejs.org/) library and [secondary libraries](https://github.com/cornerstonejs), respectively, are supporting this prototype. We [Acknowledge](https://github.com/MIMBCD-UI/prototype-multi-modality-assistant/blob/master/README.md#acknowledgments) all people involved in the path.
+For more information about the [MIMBCD-UI](https://mimbcd-ui.github.io/) research work just follow the [link](https://github.com/MIMBCD-UI/meta). Pieces of information about details of this repository are also in a [wiki](https://github.com/mida-project/prototype-multi-modality-assistant/wiki). This prototype was developed using several libraries and dependencies. Despite that all libraries had their importance and supported the development, one of it was of chief importance. The [CornerstoneJS](https://cornerstonejs.org/) library and [secondary libraries](https://github.com/cornerstonejs), respectively, are supporting this prototype. We [Acknowledge](https://github.com/mida-project/prototype-multi-modality-assistant/blob/master/README.md#acknowledgments) all people involved in the path.
 
 ### License
 
 Copyright © 2017 [Instituto Superior Técnico (IST)](https://tecnico.ulisboa.pt/)
 
-The [`prototype-multi-modality-assistant`](https://github.com/MIMBCD-UI/prototype-multi-modality-assistant) repository is distributed under the terms of both [Academic License](https://github.com/MIMBCD-UI/prototype-multi-modality-assistant/blob/master/ACADEMIC.md) and [Commercial License](https://github.com/MIMBCD-UI/prototype-multi-modality-assistant/blob/master/COMMERCIAL.md), for academic and commercial purpose, respectively. For more information regarding the [License](https://github.com/MIMBCD-UI/prototype-multi-modality-assistant/blob/master/LICENSE.md) of the hereby repository, just follow both [ACADEMIC](https://github.com/MIMBCD-UI/prototype-multi-modality-assistant/blob/master/ACADEMIC.md) and [COMMERCIAL](https://github.com/MIMBCD-UI/prototype-multi-modality-assistant/blob/master/COMMERCIAL.md) files.
+The [`prototype-multi-modality-assistant`](https://github.com/mida-project/prototype-multi-modality-assistant) repository is distributed under the terms of both [Academic License](https://github.com/mida-project/prototype-multi-modality-assistant/blob/master/ACADEMIC.md) and [Commercial License](https://github.com/mida-project/prototype-multi-modality-assistant/blob/master/COMMERCIAL.md), for academic and commercial purpose, respectively. For more information regarding the [License](https://github.com/mida-project/prototype-multi-modality-assistant/blob/master/LICENSE.md) of the hereby repository, just follow both [ACADEMIC](https://github.com/mida-project/prototype-multi-modality-assistant/blob/master/ACADEMIC.md) and [COMMERCIAL](https://github.com/mida-project/prototype-multi-modality-assistant/blob/master/COMMERCIAL.md) files.
+
+### Team
+
+Our team brings everything together sharing ideas and the same purpose, developing even better work. In this section, we will nominate the full list of important people for this repository, as well as respective links.
+
+#### Authors
+
+* Francisco Maria Calisto [ [Website](https://web.tecnico.ulisboa.pt/francisco.calisto) | [ResearchGate](https://www.researchgate.net/profile/Francisco_Maria_Calisto) | [GitHub](https://github.com/FMCalisto) | [Twitter](https://twitter.com/FMCalisto) | [LinkedIn](https://www.linkedin.com/in/fmcalisto/) ]
+
+* Carlos Santiago [ [ResearchGate](https://www.researchgate.net/profile/Carlos_Santiago6) ]
+
+* Nuno Nunes [ [ResearchGate](https://www.researchgate.net/profile/Nuno_Nunes2) ]
+
+* Jacinto Nascimento [ [ResearchGate](https://www.researchgate.net/profile/Jacinto_Nascimento) ]
+
+#### Revisors
+
+* Hugo Lencastre [ [ResearchGate](https://www.researchgate.net/profile/Hugo_Lencastre) ]
+
+* Nádia Mourão [ [ResearchGate](https://www.researchgate.net/profile/Nadia_Mourao) ]
+
+#### Companions
+
+* Alfredo Ferreira
+* Bruno Cardoso
+* Bruno Dias
+* Bruno Oliveira
+* Catarina Barata
+* Daniel Gonçalves
+* João Bernardo Tavares
+* Luís Ribeiro Gomes
+* Madalena Pedreira
+* Pedro Miraldo
 
 #### Acknowledgments
+
+This work was partially supported by national funds through [FCT](http://fct.pt/) and [IST](http://tecnico.ulisboa.pt/) through the [UID/EEA/50009/2013](https://www.fct.pt/apoios/projectos/consulta/vglobal_projecto.phtml.en?idProjecto=147329&idElemConcurso=8999) project, [BL89/2017-IST-ID](http://ist-id.pt/en/) grant. We thank [Dr. Clara Aleluia](https://www.researchgate.net/profile/Clara_Aleluia) and her [radiology team](https://repositorio.hff.min-saude.pt/handle/10400.10/4?locale=en) of [HFF](https://hff.min-saude.pt/) for valuable insights and helping using the *Assistant* on their daily basis. From [IPO-Lisboa](http://www.ipolisboa.min-saude.pt/), we would like to thank the medical imaging teams of [Dr. José Carlos Marques](https://www.researchgate.net/profile/Jose_Marques42) and [Dr. José Venâncio](http://www.ipolisboa.min-saude.pt/servicosclinicos/radiologia/). From [IPO-Coimbra](https://ipocoimbra.com), we would like to thank the radiology department director and the all team of [Dr. Idílio Gomes](https://ipocoimbra.com/servico-de-imagiologia/). Also, we would like to provide our acknowledgments to Dr. Emília Vieira and Dr. Cátia Pedro from [Hospital Santa Maria](http://www.chln.min-saude.pt/). Furthermore, we want to thank all team from the radiology department of [HB](http://www.chbm.min-saude.pt/) for participation. Last but not least, a great thanks to [Dr. Cristina Ribeiro da Fonseca](http://imi.pt/pt/content/31-corpo-clnico/32-profissionais-imi?content=55), who among others is giving us crucial information for the [BreastScreening](https://github.com/BreastScreening) project.
 
 A special thanks to [Chris Hafey](https://www.linkedin.com/in/chafey/), the propelling person of [CornerstoneJS](https://cornerstonejs.org/), who also developed the [cornerstoneDemo](https://github.com/chafey/cornerstoneDemo). Not forgetting the three supporters of the CornerstoneJS library, [Aloïs Dreyfus](https://www.linkedin.com/in/alois-dreyfus), [Danny Brown](http://dannyrb.com/) and [Erik Ziegler](https://www.npmjs.com/~swederik). We also would like to give a special thanks to [Erik Ziegler](https://www.npmjs.com/~swederik) who support several [issues](https://groups.google.com/forum/#!forum/cornerstone-platform) during this path.
 
