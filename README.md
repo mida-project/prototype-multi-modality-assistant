@@ -262,7 +262,7 @@ For more information about the [MIMBCD-UI](https://mimbcd-ui.github.io/) researc
 
 ### License
 
-Copyright © 2017 [Instituto Superior Técnico (IST)](https://tecnico.ulisboa.pt/)
+Copyright © 2018 [Instituto Superior Técnico (IST)](https://tecnico.ulisboa.pt/)
 
 The [`prototype-multi-modality-assistant`](https://github.com/mida-project/prototype-multi-modality-assistant) repository is distributed under the terms of both [Academic License](https://github.com/mida-project/prototype-multi-modality-assistant/blob/master/ACADEMIC.md) and [Commercial License](https://github.com/mida-project/prototype-multi-modality-assistant/blob/master/COMMERCIAL.md), for academic and commercial purpose, respectively. For more information regarding the [License](https://github.com/mida-project/prototype-multi-modality-assistant/blob/master/LICENSE.md) of the hereby repository, just follow both [ACADEMIC](https://github.com/mida-project/prototype-multi-modality-assistant/blob/master/ACADEMIC.md) and [COMMERCIAL](https://github.com/mida-project/prototype-multi-modality-assistant/blob/master/COMMERCIAL.md) files.
 
