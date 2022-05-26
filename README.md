@@ -261,6 +261,11 @@ Copyright © 2018 [Instituto Superior Técnico (IST)](https://tecnico.ulisboa.pt
 
 The [`prototype-multi-modality-assistant`](https://github.com/mida-project/prototype-multi-modality-assistant) repository is distributed under the terms of both [Academic License](https://github.com/mida-project/prototype-multi-modality-assistant/blob/master/ACADEMIC.md) and [Commercial License](https://github.com/mida-project/prototype-multi-modality-assistant/blob/master/COMMERCIAL.md), for academic and commercial purpose, respectively. For more information regarding the [License](https://github.com/mida-project/prototype-multi-modality-assistant/blob/master/LICENSE.md) of the hereby repository, just follow both [ACADEMIC](https://github.com/mida-project/prototype-multi-modality-assistant/blob/master/ACADEMIC.md) and [COMMERCIAL](https://github.com/mida-project/prototype-multi-modality-assistant/blob/master/COMMERCIAL.md) files.
 
+
+#### Intellectual Property
+
+The content of the present repository has obtained the patent right of [World Intellectual Property Organization (WIPO)](https://www.wipo.int) invention. Moreover, the hereby invention of the [`prototype-multi-modality-assistant`](https://github.com/mida-project/prototype-multi-modality-assistant) repository is under protection of the patent number **[WO2022071818A1](https://patents.google.com/patent/WO2022071818A1)** with the application number **PCT/PT2021/050029**. The title of the invention is "*Computational Method and System for Improved Identification of Breast Lesions*", registered under the WO patent office.
+
 ### Team
 
 Our team brings everything together sharing ideas and the same purpose, developing even better work. In this section, we will nominate the full list of important people for this repository, as well as respective links.
