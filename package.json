@@ -86,7 +86,7 @@
     "http-server": "^0.12.3",
     "merry": "^5.5.2",
     "path": "^0.12.7",
-    "requirejs": "^2.3.6",
+    "requirejs": "^2.3.7",
     "semver": "^7.5.2",
     "serve-static": "^1.13.2"
   }
